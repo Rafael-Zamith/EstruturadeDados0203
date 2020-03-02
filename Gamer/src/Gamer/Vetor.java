@@ -1,12 +1,12 @@
 package Gamer;
 
 public class Vetor {
-    private int[] A; // armazena os elementos do vetor
+    private Gamer[] A; // armazena os elementos do vetor
         private int capacity; // capacidade do vetor
         private int size; // elementos no vetor
 
         public Vetor(int capacity) {
-         A = new int[capacity];
+         A = new Gamer[capacity];
         this.size = 0;
         this.capacity = capacity;
         }
@@ -21,7 +21,7 @@ public class Vetor {
             return size;
         }
 
-        public int get(int i) throws Exception {
+        public Gamer get(int i) throws Exception {
             if (i>=size)
             {throw new Exception("Posição inválida para consulta!");
         }
@@ -30,7 +30,7 @@ public class Vetor {
 
         }
 
-        public int set(int i, int n) throws Exception {
+        public Gamer set(int i, Gamer n) throws Exception {
             if (i>=size)
             {throw new Exception("Posição inválida para consulta!");
         }
@@ -38,7 +38,7 @@ public class Vetor {
         return n;
         }
 
-        public void add(int i, int n) throws Exception {
+        public void add(int i, Gamer n) throws Exception {
             if(size==A.length){
                 throw new Exception("Lista cheia");
             }
@@ -65,7 +65,7 @@ public class Vetor {
             size--;
         }
 
-        public int search(int n) throws Exception {
+        public int search(Gamer n) throws Exception {
             if(isEmpty())
             throw new Exception("Lista vazia");
 
@@ -77,7 +77,7 @@ public class Vetor {
         }
     
 
-        public int [ ] getArray() {
+        public Gamer [ ] getArray() {
          return A;
         }
     
