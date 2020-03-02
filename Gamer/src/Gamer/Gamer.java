@@ -14,17 +14,5 @@ public class Gamer {
         return score;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    /**
-     * @param score the score to set
-     */
-    public void setScore(int score) {
-        this.score = score;
-    }
 }

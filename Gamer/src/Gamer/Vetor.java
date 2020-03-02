@@ -48,7 +48,7 @@ public class Vetor {
         for(int j = size -1;j >= i;j--){
             A[j +1] = A[j];
         }
-        Gamer h = new Gamer(n,g);
+        A[i] = new Gamer(n,g);
         size++;
         }
 
@@ -77,8 +77,16 @@ public class Vetor {
         }
     
 
-        public Gamer [ ] getArray() {
-         return A;
+        public void getArray() {
+            int i =0;
+            while (A[i] != null) {
+            for (i=0;i<size;i++){
+                    System.out.println(A[i].getName() +": "+ A[i].getScore());
+            }
+         
         }
-    
+    }
+
+
+
 }
