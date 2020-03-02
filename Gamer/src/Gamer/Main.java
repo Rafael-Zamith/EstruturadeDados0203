@@ -9,7 +9,9 @@ public class Main {
        Vetor v = new Vetor(10);
        
        v.add(0, "Abner", 0);
-        System.out.println(v.getArray());
-        System.out.println(v.isEmpty());
+       v.add(1, "Zamith", 10);
+       
+       System.out.println(v.getArray());
+       System.out.println(v.isEmpty());
     }
 }
