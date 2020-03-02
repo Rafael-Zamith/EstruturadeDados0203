@@ -1,8 +1,5 @@
 package Gamer;
 
-/**
- * Vetor
- */
 public class Vetor {
     private int[] A; // armazena os elementos do vetor
         private int capacity; // capacidade do vetor
