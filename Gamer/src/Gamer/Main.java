@@ -3,9 +3,13 @@ package Gamer;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
        List<Gamer> gamer;
        gamer = new ArrayList<Gamer>();
        Vetor v = new Vetor(10);
+       
+       v.add(0, "Abner", 0);
+        System.out.println(v.getArray());
+        System.out.println(v.isEmpty());
     }
 }

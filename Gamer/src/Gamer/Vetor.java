@@ -6,7 +6,7 @@ public class Vetor {
         private int size; // elementos no vetor
 
         public Vetor(int capacity) {
-         A = new Gamer[capacity];
+         A = new Gamer [capacity];
         this.size = 0;
         this.capacity = capacity;
         }
@@ -38,7 +38,7 @@ public class Vetor {
         return n;
         }
 
-        public void add(int i, Gamer n) throws Exception {
+        public void add(int i, String n, int g) throws Exception {
             if(size==A.length){
                 throw new Exception("Lista cheia");
             }
@@ -48,7 +48,7 @@ public class Vetor {
         for(int j = size -1;j >= i;j--){
             A[j +1] = A[j];
         }
-        A[i]=n;
+        Gamer h = new Gamer(n,g);
         size++;
         }
 
