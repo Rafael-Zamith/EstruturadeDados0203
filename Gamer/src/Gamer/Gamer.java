@@ -1,4 +1,10 @@
 package Gamer;
+/*
+@autores:
+Abner Santos
+Rafael Zamith
+Vitor Akira
+*/
 public class Gamer {
     private String name;
     private int score;
