@@ -11,17 +11,13 @@ public class Vetor {
         private int size;
 
         public Vetor(int capacity) {
-        A = new Gamer [capacity];
-        this.size = 0;
-        this.capacity = capacity;
+            A = new Gamer [capacity];
+            this.size = 0;
+            this.capacity = capacity;
         }
 
         public boolean isEmpty() {
             return (size == 0);
-        }
-
-        public int size() {
-            return size;
         }
 
         public Gamer get(int i) throws Exception {
@@ -29,14 +25,6 @@ public class Vetor {
                 throw new Exception("Posição inválida para consulta!");
             }
             return A[i];
-        }
-
-        public Gamer set(int i, Gamer n) throws Exception {
-            if (i>=size){
-                throw new Exception("Posição inválida para consulta!");
-            }
-            A[i]=n;
-            return n;
         }
 
         public void add(int i, String n, int g) throws Exception {
@@ -65,25 +53,13 @@ public class Vetor {
                 A[j]=A[j+1];
             }
             size--;
-        }
-
-        public int search(Gamer n) throws Exception {
-            if(isEmpty())
-            throw new Exception("Lista vazia");
-
-            for(int i=0;i<size;i++)
-                if(A[i]==n)
-                    return i;
-
-            return -1;
-        }
-    
+        }   
 
         public void mostarPont(boolean a,int i) {
             if (a==true){
-            while (A[i] != null) {
-                for (i=0;i<size;i++){
-                    System.out.println(A[i].getName() +": "+ A[i].getScore());
+                while (A[i] != null) {
+                    for (i=0;i<size;i++){
+                        System.out.println(A[i].getName() +": "+ A[i].getScore());
                 }
             }
             }
@@ -93,24 +69,15 @@ public class Vetor {
             }
         }
 
-        public void organizvet() throws Exception{
-            if (isEmpty()==false) {
-                    Gamer temp;
-                    // inicia o Bubble Sort
-                    for(int i=0; i<size; i++)
-                    for(int j=1; j<size-i;j++)
+        private void organizvet() throws Exception{
+            Gamer temp;
+            for(int i=0; i<size; i++)
+                for(int j=1; j<size-i;j++)
                     if(A[j-1].getScore() < A[j].getScore()){
-                    //troca os elementos
-                    temp = A [j-1];
-                    A [j-1] = A [j];
-                    A [j] = temp;
+                        temp = A [j-1];
+                        A [j-1] = A [j];
+                        A [j] = temp;
                     }
-                    
-                    
-            } else {
-                throw new Exception("Lista vazia"); //n precisa
-            }
-
         }
         
 
